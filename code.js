@@ -1,7 +1,7 @@
 const video = document.querySelector('video');
 const audio = document.getElementById('background-audio');
 
-let videosamling = [
+let videos = [
     'video/fireplace_01.mp4',
     'video/fireplace_02.mp4',
     'video/fireplace_03.mp4',
@@ -9,23 +9,34 @@ let videosamling = [
     'video/fireplace_05.mp4',
 ];
 
+// Set den første videoen som aktiv
 let activeVideo = 0;
-video.src = videosamling[activeVideo];
+video.src = videos[activeVideo];
 
-function playMedia() {
-    video.play();
-    audio.play();
-    document.removeEventListener('click', playMedia);
-}
+// Oppretter lydfila
+const soundfile = new Audio('audio/fireplace_loop.mp3');
+let isPlaying = false;
 
-document.querySelector("main").addEventListener('click', playMedia);
-
-function playMedia() {
-    activeVideo++;
-    if (activeVideo >= videosamling.length) {
-        activeVideo = 0;
+// Lyttar etter trykk på tastaturet
+document.addEventListener('keydown', function(event) {
+    // Startar lyden om den ikkje allereie spelar
+    if (!isPlaying) {
+        soundfile.play();
+        isPlaying = false;
     }
-    video.src = videosamling[activeVideo];
-    video.play();
-    audio.play();
-}
+
+    // Lyttar etter mellomromstasten, og byter video
+    if (event.code === 'Space') {
+        activeVideo++;
+        if (activeVideo >= videos.length) {
+            activeVideo = 0;
+        }
+        video.src = videos[activeVideo];
+        video.play();
+    }
+});
+
+// Skjuler informasjonen etter 10 sekund
+setTimeout(function() {
+    document.querySelector('main').style.display = 'none';
+}, 10000);
