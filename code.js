@@ -27,14 +27,23 @@ document.addEventListener('keydown', function(event) {
 
     // Lyttar etter mellomromstasten, og byter video
     if (event.code === 'Space') {
-        activeVideo++;
-        if (activeVideo >= videos.length) {
-            activeVideo = 0;
-        }
-        video.src = videos[activeVideo];
-        video.play();
+        changeVideo();
     }
 });
+
+// Lyttar etter dobbeltklikk/tapping på videoelementet
+document.addEventListener('dblclick', function() {
+    changeVideo();
+});
+
+function changeVideo() {
+    activeVideo++;
+    if (activeVideo >= videos.length) {
+        activeVideo = 0;
+    }
+    video.src = videos[activeVideo];
+    video.play();
+}
 
 // Skjuler informasjonen etter 10 sekund
 setTimeout(function() {
