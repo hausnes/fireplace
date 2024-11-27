@@ -29,6 +29,14 @@ document.addEventListener('keydown', function(event) {
     if (event.code === 'Space') {
         changeVideo();
     }
+
+    // Paoskje-egg!
+    if (event.code === 'KeyT') {
+        console.log('Paoskje!');
+        let burnVictim = document.createElement('img');
+        burnVictim.src = 'pics/animasjon-nobg.gif';
+        document.body.appendChild(burnVictim);
+    }
 });
 
 // Lyttar etter dobbeltklikk/tapping på videoelementet
