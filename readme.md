@@ -30,5 +30,7 @@ Dersom du ikkje ynskjer å streame koselege peisvideoar frå YouTube, kan du no 
 - Videofilene er store, og det tek tid å laste inn.
   - Lazy load?
   - Andre strategiar?
-- Start-skjerm der brukaren startar appen for å unngå problem med godkjenning av lyd- og videoavspeling
 - ...
+
+## Oppdateringar
+- Start-skjerm der brukaren startar appen for å unngå problem med godkjenning av lyd- og videoavspeling. (19.12.2024)
