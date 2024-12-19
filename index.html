@@ -8,33 +8,35 @@
     <script src="code.js" defer></script>
 </head>
 <body>
-    <video autoplay muted loop>
+    <div id="start-screen">
+        <main>
+            <h1>
+                Å Gu' Kor Koseleg!
+            </h1>
+            <p>
+                Velkomen til vår digitale peis. Her kan du slappe av og kose deg med knitringa frå bålet. 
+                Perfekt for kalde vinterkveldar, eller kanskje som bakgrunn når du les ei god bok.
+            </p>
+            <p>
+                <em>Hugs å godkjenne bruk av lyd og video i nettlesaren din dersom du får problem!</em>
+            </p>
+            <p>
+                Du kan byte video ved å trykke på 'SPACE' på tastaturet, 
+                eller dobbeltklikke kvar som helst på skjermen.
+            </p>
+            <!-- <p>
+                Denne informasjonen forsvinn etter 10 sekund.
+            </p> -->
+            <button id="start-button">Start</button>
+        </main>
+    </div>
+    <video muted loop>
         <source src="video/fireplace_02.mp4" type="video/mp4">
         Your browser does not support the video tag.
     </video>
-    <audio autoplay loop>
+    <audio id="background-audio" loop>
         <source src="audio/fireplace_loop.mp3" type="audio/mp3">
         Your browser does not support the audio element.
     </audio>
-
-    <main>
-        <h1>
-            Å Gu' Kor Koseleg!
-        </h1>
-        <p>
-            Velkomen til vår digitale peis. Her kan du slappe av og kose deg med knitringa frå bålet. 
-            Perfekt for kalde vinterkveldar, eller kanskje som bakgrunn når du les ei god bok.
-        </p>
-        <p>
-            <em>Hugs å godkjenne bruk av lyd og video i nettlesaren din!</em>
-        </p>
-        <p>
-            Du kan byte video ved å trykke på 'SPACE' på tastaturet, 
-            eller dobbeltklikke kvar som helst på skjermen.
-        </p>
-        <p>
-            Denne informasjonen forsvinn etter 10 sekund.
-        </p>
-    </main>
 </body>
 </html>

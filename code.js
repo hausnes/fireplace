@@ -44,6 +44,17 @@ document.addEventListener('dblclick', function() {
     changeVideo();
 });
 
+document.getElementById('start-button').addEventListener('click', function() {
+    document.getElementById('start-screen').style.display = 'none';
+    video.play();
+    audio.play();
+    
+    // Skjuler informasjonen etter 10 sekund
+    // setTimeout(function() {
+    //     document.querySelector('main').style.display = 'none';
+    // }, 10000);
+});
+
 function changeVideo() {
     activeVideo++;
     if (activeVideo >= videos.length) {
@@ -52,8 +63,3 @@ function changeVideo() {
     video.src = videos[activeVideo];
     video.play();
 }
-
-// Skjuler informasjonen etter 10 sekund
-setTimeout(function() {
-    document.querySelector('main').style.display = 'none';
-}, 10000);
