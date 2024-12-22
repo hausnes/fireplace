@@ -10,10 +10,11 @@ Dersom du ikkje ynskjer å streame koselege peisvideoar frå YouTube, kan du no 
 
 ## Viktig
 
-- **Godkjenning av lyd og video:** Hugs å godkjenne bruk av lyd og video i nettlesaren din!
+- **Godkjenning av lyd og video:** Hugs å godkjenne bruk av lyd og video i nettlesaren din dersom du får problem!
 - **Byte video:**
   - Trykk på `SPACE` på tastaturet
   - Dobbeltklikk kvar som helst på skjermen (fungerer på mobil òg)
+- **Bakgrunnsmusikk:** Du kan slå på og av bakgrunnsmusikk ved å trykke M/m på tastaturet.
 - **Påske-egg:** Eit trykk på tastaturet kan brenne ein person..
 
 **Merk:** Informasjonen forsvinn etter 10 sekunder på sjølve nettsida.
