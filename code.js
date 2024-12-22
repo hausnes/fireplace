@@ -13,9 +13,13 @@ let videos = [
 let activeVideo = 0;
 video.src = videos[activeVideo];
 
-// Oppretter lydfila
+// Oppretter lydfila med "knitring"
 const soundfile = new Audio('audio/fireplace_loop.mp3');
 let isPlaying = false;
+
+// Opprettar lydfila med bakgrunnsmusikk
+const music = new Audio("audio/christmas-night-piano-274333.mp3");
+let playing = false;
 
 // Lyttar etter trykk på tastaturet
 document.addEventListener('keydown', function(event) {
@@ -36,6 +40,19 @@ document.addEventListener('keydown', function(event) {
         let burnVictim = document.createElement('img');
         burnVictim.src = 'pics/animasjon-nobg.gif';
         document.body.appendChild(burnVictim);
+    }
+
+    // Bakgrunnsmusikk, du skrur av og på ved å trykke "M"/"m" på tasaturet
+    if (event.code === 'KeyM') {
+        console.log("Bakgrunnsmusikk.");
+        if (playing) {
+            music.pause();
+            playing = false;
+        }
+        else {
+            music.play();
+            playing = true;
+        }
     }
 });
 
